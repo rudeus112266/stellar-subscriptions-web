@@ -38,7 +38,15 @@ function Subscriptions({ address }: { address: string }) {
     return (
       <EmptyState
         title="No subscriptions yet"
-        description="When you subscribe to a plan, it shows up here with your cap, what's been charged, and controls to pause or cancel."
+        description={
+          <>
+            When you subscribe to a plan, it shows up here with your cap, what&apos;s been charged, and controls to
+            pause or cancel.{" "}
+            <Link href="/help" className="text-brand hover:underline">
+              How caps and intervals work
+            </Link>
+          </>
+        }
         action={
           <Link href="/plans" className="btn-primary">
             Browse plans
